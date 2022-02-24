@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>About me</title>
+  <style>
+    h1{
+      font-family: Futura;
+      font-style: italic;
+      color: #5c3e70;
+      text-align: center;
+    }
+    body{
+      font-family: Helvetica;
+      background-color: #fbfaf6;
+    }
+    a{
+      color: #aea6b3;
+      text-decoration: none;
+    }
+    a:hover{
+      text-decoration: underline;
+    }
+    p::first-letter{
+      font-size: 17.5px;
+    }
+    /* here we set the list to decrementing order */
+    ol{
+      counter-reset: my-custom-counter 4;
+      list-style: none;
+    }
+
+    ol li{
+      counter-increment: my-custom-counter -1;
+    }
+
+    ol li::before{
+      content: counter(my-custom-counter) '. ';
+    }
+  </style>
+</head>
+<body>
+  <h1>Valeria Mansilla</h1>
+  <p>
+    My name is Valeria and I am a <b>Computer Science</b> student at Jacobs University Bremen.
+    I am originally from <b>Guatemala</b> and can fluently speak Spanish and English.
+    Currently learning <b>German</b> as a third language.
+  </p>
+
+  <hr>
+
+  <h3>My classes this semester</h3>
+  <ul>
+    <li>CA-CS-804 Web Application Development</li>
+    <li>JT-BQ-023 Cultural Censorship and Freedom of Speech</li>
+  </ul>
+
+  <h3>My favorite movies</h3>
+  <!-- Alternatively we could include the 'reversed' attribute in the  ol tag -->
+  <ol>
+    <li>Isle of Dogs (2018)
+      <a href="https://www.imdb.com/title/tt5104604/">
+        (IMBD)
+      </a>
+    </li>
+    <li>Kiki's Delivery System (1989)
+      <a href="https://www.imdb.com/title/tt0097814/">
+        (IMBD)
+      </a>
+    </li>
+    <li>Coraline
+      <a href="https://www.imdb.com/title/tt0327597/">
+        (IMBD)
+      </a>
+      <dl>
+        <dt>Director</dt>
+          <dd>Henry Selick</dd>
+        <dt>Genres</dt>
+          <dd>Animation / Drama / Family / Fantasy / Thriller</dd>
+        <dt>Tagline</dt>
+          <dd>Be careful what you wish for.</dd>
+        <dt>Plot outline</dt>
+          <dd>
+            An adventurous 11-year-old girl finds another world that is a
+            strangely idealized version of her frustrating home, but it has
+            sinister secrets.
+          <dd>
+      </dl>
+    </li>
+  </ol>
+
+  <h3>My moods</h3>
+  Happy:
+  <img src="img/happy.jpg" width="25%" alt="Picture of a dog smiling">
+  Sad:
+  <img src="img/sad.jpg" width="25%" alt="Picture of a dog wrapped in a blanket">
+
+  <h3>Fun facts about my classmate</h3>
+  <ul>
+    <li>Erlisa is from the same country as my best friend (Albania).</li>
+  </ul>
+
+  <p>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+    </a>
+  </p>
+</body>
+</html>
